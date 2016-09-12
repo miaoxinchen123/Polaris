@@ -1,0 +1,114 @@
+#reader-download-title {
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+    margin: 40px auto 10px auto;
+    text-align: center;
+}
+	#reader-download-title span {
+		font-size: 12px;
+	    padding-left: 20px;
+	    text-decoration: underline;
+	    cursor:pointer;
+	}
+.reader-item-wrapper {
+	height:200px;
+}
+
+.reader-item-wrapper:hover {
+	background-color:rgb(245,245,245);
+}
+.reader-item {
+	width: 600px;
+    height: 160px;
+    margin-left:auto;
+	margin-right:auto;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+	.reader-item .reader-icon {
+		width: 160px;
+	    height: 100%;
+	    float: left;
+	    background-position: center;
+	    background-size: 100px 100px;
+	    background-repeat: no-repeat;
+	    border-right: solid 1px rgb(200,200,200);
+	}
+	#pdf-icon {
+		background-image: url(../images/adobe-reader-icon.png);
+	}
+	#calibre-icon {
+		background-image: url(../images/calibre-icon.png);
+	}
+	#digital-editions-icon {
+		background-image: url(../images/digital-editions-icon.png);
+	}
+	#ireader-icon {
+		background-image: url(../images/ireader-icon.png);
+	}
+	
+	.reader-item .reader-info {
+		font-size: 14px;
+	    width: 400px;
+	    height: 100%;
+	    margin-left: 190px;
+	}
+		.reader-item .reader-title {
+			height: 50px;
+		    line-height: 50px;
+		    font-weight: 700;
+		    font-size: 16px;
+		}
+		.reader-item .reader-abstract,
+		.reader-item .reader-format {
+			height: 25px;
+		    line-height: 25px;
+		}
+		.reader-item .reader-download-div {
+			height:50px;
+			color: white;
+		    text-align: center;
+		    line-height: 35px;
+		}
+		.windows-version-download-button,
+		.mac-version-download-button,
+		.android-version-download-button,
+		.iphone-version-download-button {
+			width:180px;
+			height:35px;
+		    margin-top: 10px;
+			margin-right:20px;
+			background-color:rgb(20,100,150);
+			float:left;
+		    border-radius:6px;
+			cursor:pointer;
+		}
+		.windows-version-download-button-left,
+		.mac-version-download-button-left,
+		.android-version-download-button-left,
+		.iphone-version-download-button-left {
+		    width: 35px;
+		    float: left;
+		    height: 100%;
+		    border-right: solid 1px white;
+		    background-size: 15px;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    border-top-right-radius: 3px;
+		}
+		.windows-version-download-button-left {
+			background-image: url(../images/btn_icon_pc.png);	
+		}
+		.mac-version-download-button-left {
+			background-image: url(../images/btn_icon_mac.png);
+		}
+		.android-version-download-button-left {
+			background-image: url(../images/btn_icon_android.png);
+		}
+		.iphone-version-download-button-left {
+			background-image: url(../images/btn_icon_mac.png);
+		}
+	

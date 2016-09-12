@@ -1,0 +1,121 @@
+#login,
+#register {
+	display:none;
+}
+#logout {
+	display:block;
+}
+
+#profile-wrapper {
+	width:1000px;
+	height:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+}
+	#profile-wrapper #user-center-navigator {
+		text-align:left;
+		line-height:30px;
+		font-size:13px;
+		width:130px;
+		color:rgb(240,240,240);
+		float:left;
+	}
+	#profile-wrapper #user-center-navigator a {
+		margin-left:35px;
+		text-decoration:none;
+	}
+		.user-center-head {
+		    background-color:rgb(20,100,150);
+		    font-weight:700;
+		    height:40px;
+		    line-height:40px;
+		}
+		.user-center-head span {
+			margin-left:35px;
+		}
+		.user-center-menu {
+			cursor:pointer;
+			color:black;
+			margin-top:5px;
+			background-size: 14px;
+		    background-repeat: no-repeat;
+		    background-position: 10px center;
+		}
+		.user-center-menu-selected {
+			background-color:rgb(240,240,240);
+		}
+
+		.user-center-menu:hover {
+			color:rgb(128,15,37);
+		}
+		
+		#cart-menu {
+			background-image: url(../images/user-cart.png);
+		}
+		#order-menu {
+			background-image: url(../images/order.png);
+		}
+		#credits-menu {
+			background-image: url(../images/credits.png);
+		}
+		#profile-menu {
+			background-image: url(../images/profile.png);
+		}
+		
+#profile {
+	width: 837px;
+    margin-left: 30px;
+	line-height:30px;
+	font-size:14px;
+	color:rgb(250,250,250);
+	float:left;
+}
+	#profile #profile-head {
+		background-color:rgb(20,100,150);
+	    height:40px;
+	    line-height:40px;
+		width:835px;
+	}
+	#profile #profile-head span {
+		margin-left:30px;
+	}
+	
+	#profile-list {
+		width:835px;
+		margin-top:20px;
+	}
+	.profile-item {
+		width:100%;
+		height: 30px;
+		line-height:30px;
+		margin-top:5px;
+		color: black;
+	}
+	.profile-label {
+		width: 100px;
+	    display: block;
+	    text-align: left;
+	    float: left;
+	    margin-left: 30px;
+	}
+	.profile-input {
+		width: 300px;
+	    margin-left: 20px;
+	    height: 22px;
+	    padding-left: 5px;
+	    font-family: "Courier New","Microsoft Yahei";
+	}
+	.profile-button {
+	    margin-top: 30px;
+	    width: 100px;
+	    height: 30px;
+	    background-color: rgb(20,100,150);
+	    float: left;
+	    text-align: center;
+	    letter-spacing: 3px;
+	    margin-left: 150px;
+	    cursor: pointer;
+	}
+	
+	

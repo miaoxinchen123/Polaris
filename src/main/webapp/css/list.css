@@ -1,0 +1,223 @@
+a {
+	color:grey;
+}
+
+#search-header {
+    height: 50px;
+    margin-top: 15px;
+}
+	#search-header #search-header-logo {
+		float:left;
+	    width:112px;
+	    margin:-3px 18px 0px 20px;
+	    height:40px;
+	    cursor:pointer;
+	}
+	#search-header .search-box {
+		float:left;
+	}
+	
+#search-input {
+	color:black;
+}
+	
+#result-overview {
+	font-size:13px;
+	line-height:40px;
+    height:40px;
+    margin-bottom:20px;
+    background-color:rgb(240,240,240);
+}
+	
+	#result-overview #result-statistics {
+		float: left;
+	    width: 250px;
+	    line-height: 40px;
+	    margin-left: 150px;
+	}
+	
+    #result-overview #select-page {
+		float:left;
+	    line-height: 40px;
+	    font-size: 13px;
+	    width: 400px;
+    }
+    	#result-overview #select-page #page-left-arrow {
+	    	height: 40px;
+	    	padding-left:20px;
+	    	width: 60px;
+		    float: left;
+		    background-image: url("../images/left-arrow-1.png");
+		    background-size: 20px;
+		    background-position-x: left;
+		    background-position-y: center;
+		    background-repeat: no-repeat;
+		    cursor:pointer;
+    	}
+    	#result-overview #select-page #page-left-arrow:hover {
+			background-image: url("../images/left-arrow-2.png");
+			color:rgb(128,15,37);
+			font-weight:bold;
+		}
+    	
+    	#result-overview #select-page .page-number {
+    		width: 20px;
+		    display: inline-block;
+		    cursor: pointer;
+		    text-align: center;
+		    float:left;
+    	}
+    	#result-overview #select-page .page-number:hover,
+    	.current-page-number {
+    		color:rgb(128,15,37);
+    		font-weight:bold;
+    	}
+    	
+    	#result-overview #select-page #page-right-arrow {
+	    	height: 40px;
+	    	text-align:right;
+	    	padding-right:20px;
+	    	width: 60px;
+		    float: left;
+		    background-image: url("../images/right-arrow-1.png");
+		    background-size: 20px;
+		    background-position-x: right;
+		    background-position-y: center;
+		    background-repeat: no-repeat;
+		    cursor:pointer;
+    	}
+    	#result-overview #select-page #page-right-arrow:hover {
+			background-image: url("../images/right-arrow-2.png");
+			color:rgb(128,15,37);
+			font-weight:bold;
+		}
+ 
+.book-item {
+	height:200px;
+	width:900px;
+	padding-top:5px;
+	padding-bottom:5px;
+    margin-left:150px;
+    border-bottom: solid 1px rgb(220,220,220);
+}	
+.book-item:hover {
+	
+}
+	
+	.book-item .book-cover-small {
+		width: 180px;
+	    height: 190px;
+	    float: left;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	    background-size: auto 190px;
+	    background-position-x: left;
+	    background-position-y: center;
+	    background-repeat: no-repeat;
+	    cursor:pointer;
+	}
+	
+	.book-item .info-simple-title {
+		float:left;
+		padding-left:10px;
+		margin-left:10px;
+		width:695px;
+		height:50px;
+		line-height:50px;
+		font-size:18px;
+		font-weight:100;
+		text-overflow: ellipsis;
+    	white-space: nowrap;
+    	display: inline-block;
+    	overflow: hidden;
+	}
+	.book-item a {
+		text-decoration:none;
+		color:black;
+		cursor:pointer;
+	}
+		
+	.book-item .info-simple-other-div,
+	.book-item .price-div {
+		float:left;
+		padding-left:10px;
+		margin-left:10px;
+		width:695px;
+		height:50px;
+		height:25px;
+		margin-left:10px;
+		line-height:25px;
+		font-size:12px;
+	}
+	
+	.file-format-icon {
+		width:16px;
+	    height:16px;
+	    margin:0px 5px -2px -3px;
+	}   
+    
+    .book-item .info-simple-left {
+    	width: 90px;
+    	display: inline-block;
+    }
+    .book-item .info-simple-right {
+    	
+    }
+    
+    .book-item .info-simple-other-div a {
+    	color:black;
+    	cursor:pointer;
+    	text-decoration:underline;
+    }
+    .book-item .info-simple-other-div a:hover {
+    	color:rgb(128,15,37);
+    }    
+    
+    .book-item .price-div {
+		background-color:rgb(240,240,240);
+		height:60px;
+		margin-top:10px;
+	}
+    
+    .book-item .price-div .price-div-left {
+    	width:400px;
+    	float:left
+    }
+    
+    .book-item .origin-price-div {
+    	margin-top:5px;
+    }
+    
+    .book-item .price-div .price-div-right {
+    	width:290px;
+    	float:left
+    }
+    .book-item .buy-now-button,
+    .book-item .add-to-cart-button {
+        width: 125px;
+	    height: 28px;
+	    float: left;
+	    margin-top: 16px;
+	    margin-left:15px;
+	    background-color: rgb(255,237,237);
+	    line-height: 28px;
+	    text-align: center;
+	    font-size: 15px;
+	    border: solid 1px rgb(128,15,37);
+	    color: rgb(128,15,37);
+	    cursor: pointer;
+    }
+    .book-item .add-to-cart-button {
+    	width:105px;
+    	padding-left:20px;
+    	background-image: url("../images/cart.png");
+	    background-position-x: 18px;
+	    background-position-y: center;
+	    background-size: 12px 12px;
+	    background-repeat: no-repeat;
+	    background-color: rgb(240,240,240);
+    }
+    
+    #footer #footer-wrapper {
+    	width:100%;
+    }

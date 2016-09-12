@@ -1,0 +1,87 @@
+#buy-form {
+	font-size:14px;
+}
+#buy-form p {
+	font-family: "Courier New", "Microsoft Yahei", "Arial", "sans-serif";
+}
+
+#buy-form label {
+	width:148px;
+}
+#buy-form input {
+	width:302px;
+}
+.dialog-sub-title {
+    width:462px;
+    line-height:30px;
+    margin:30px 16px 10px 16px;
+    border-bottom:solid 1px rgb(190,190,190);
+    font-weight:700;
+    float:left;
+}
+#dialog-step-1 {
+	width:462px;
+	height:200px;
+	margin-left:16px;
+}
+#dialog-price-1,
+#dialog-price-2 {
+	font-weight:700;
+	font-size:16px;
+	color:rgb(128,15,37);
+}
+
+#dialog-step-1-1,
+#dialog-step-1-2,
+#dialog-step-1-3,
+#dialog-step-2 {
+    height:210px;
+    float:left;
+    text-align:center;
+}
+#dialog-step-1-1 {
+	width:200px;
+	margin-left:15px;
+}
+#alipay_text {
+	width:210px;
+	height:40px;
+	line-height:40px;
+}
+#alipay_graph,
+#alipay_transfer {
+	width:160px;
+	height:160px;
+	margin:10px 20px 0px 20px;
+	
+}
+#alipay_graph{
+	background-image:url("<%=request.getContextPath()%>/images/alipay_graph.jpg");
+}
+#alipay_transfer {
+	background-image:url("<%=request.getContextPath()%>/images/alipay_transfer.png");
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#dialog-step-1-2 {
+	width:60px;
+    line-height:210px;
+}
+
+#dialog-step-1-3 {
+	width:200px;
+    height:210px;
+    line-height:25px;
+}
+#transfer_text {
+	width:210px;
+	height:40px;
+	line-height:20px;	
+}
+#dialog-step-2 {
+	width:462px;
+	height:30px;
+    float:left;
+    margin-left:16px;
+    text-align:left;
+}

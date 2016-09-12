@@ -1,0 +1,160 @@
+#search-header {
+    border-bottom: solid 1px rgb(220,220,220);
+}
+	#search-header #search-header-logo {
+	    float:left;
+		width: 150px;
+	    height: 35px;
+	    background-image:url("../images/logo.png");
+	    background-size: 120px;
+	    background-repeat: no-repeat;
+	    background-position-x: center;
+	    background-position-y: center;
+	    cursor:pointer;
+	}
+	#search-header .search-box {
+		float:left;
+	}
+	
+.book-item-detail {
+	height:440px;
+	width:1000px;
+	padding-top:40px;
+	padding-bottom:20px;
+    margin-left:auto;
+	margin-right:auto;
+}	
+.book-item-detail:hover {
+	
+}
+	.book-item-detail .book-file-detail {
+		width: 280px;
+	    height: 100%;
+	    float: left;
+	    border-right:solid 1px rgb(220,220,220);
+	}
+	
+	.book-item-detail .book-cover {
+		height:290px;
+		background-size: auto 290px;
+	    background-position-x: left;
+	    background-position-y: top;
+	    background-repeat: no-repeat;
+	    margin-bottom:15px;
+	}
+	
+	.book-item-detail .info-detail-title {
+		float:left;
+		padding-left:10px;
+		padding-bottom:5px;
+		margin-left:10px;
+		width:695px;
+		height:50px;
+		line-height:25px;
+		font-size:18px;
+		font-weight:100;
+		text-overflow: ellipsis;
+    	overflow: hidden;
+	}
+		
+	.book-item-detail .info-detail-other-div,
+	.book-item-detail .price-div {
+		float:left;
+		padding-left:10px;
+		margin-left:10px;
+		width:695px;
+		height:25px;
+		line-height:25px;
+		font-size:12px;
+	}
+	.book-file-detail .info-detail-other-div {
+		margin-left:0px;
+		padding-left:0px;
+		width:250px;
+	}
+	
+	.book-item-detail .info-detail-other-div img {
+		width:16px;
+	    height:16px;
+	    margin:0px 5px -2px -3px;
+	}   
+    
+    .book-item-detail .info-detail-left {
+    	width: 80px;
+    	display: inline-block;
+    }
+    .book-item-detail .info-detail-right {
+    	
+    }
+    
+    .book-item-detail .info-detail-other-div .reader-downloader {
+    
+    }
+    
+	.book-item-detail .info-detail-other-div a {
+		cursor:pointer;
+    	text-decoration:underline;
+		color:black
+	}
+    
+    
+    .book-item-detail .info-detail-other-div .reader-downloader:hover {
+    	color:rgb(128,15,37);
+    }    
+    
+    .book-item-detail .price-div {
+		background-color:rgb(240,240,240);
+		height:60px;
+		margin-top:10px;
+	}
+    
+    .book-item-detail .price-div .price-div-left {
+    	width:400px;
+    	float:left
+    }
+    
+    .book-item-detail .origin-price-div {
+    	margin-top:5px;
+    }
+    
+    .book-item-detail .price-div .price-div-right {
+    	width:290px;
+    	float:left
+    }
+    .book-item-detail .buy-now-button,
+    .book-item-detail .add-to-cart-button {
+        width: 150px;
+	    height: 35px;
+	    float: left;
+	    margin-top: 20px;
+	    margin-left:90px;
+	    background-color: rgb(255,237,237);
+	    line-height: 35px;
+	    text-align: center;
+	    font-size: 15px;
+	    border: solid 1px rgb(128,15,37);
+	    color: rgb(128,15,37);
+	    cursor: pointer;
+    }
+    .book-item-detail .add-to-cart-button {
+    	width:130px;
+    	margin-left:15px;
+    	padding-left:20px;
+    	background-image: url("../images/cart.png");
+	    background-position-x: 28px;
+	    background-position-y: center;
+	    background-size: 12px 12px;
+	    background-repeat: no-repeat;
+	    background-color: rgb(240,240,240);
+    }
+    .book-item-detail #pay-problem {
+   	    height: 35px;
+		line-height: 35px;
+	   	width: 100px;
+	   	float: left;
+	   	margin: 20px 6px 0px 15px;
+	   	font-size: 10px;
+	   	text-decoration: underline;
+	   	cursor: pointer;
+	   	text-align: right;
+    }

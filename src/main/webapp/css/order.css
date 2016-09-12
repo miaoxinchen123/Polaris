@@ -1,0 +1,196 @@
+#login,
+#register {
+	display:none;
+}
+#logout {
+	display:block;
+}
+
+#order-wrapper {
+	width:1000px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+}
+	#order-wrapper #user-center-navigator {
+		text-align:left;
+		line-height:30px;
+		font-size:13px;
+		width:130px;
+		color:rgb(240,240,240);
+		float:left;
+	}
+	#order-wrapper #user-center-navigator a {
+		margin-left:35px;
+		text-decoration:none;
+	}
+		.user-center-head {
+		    background-color:rgb(20,100,150);
+		    font-weight:700;
+		    height:40px;
+		    line-height:40px;
+		}
+		.user-center-head span {
+			margin-left:35px;
+		}
+		.user-center-menu {
+			cursor:pointer;
+			color:black;
+			margin-top:5px;
+			background-size: 14px;
+		    background-repeat: no-repeat;
+		    background-position: 10px center;
+		}
+		.user-center-menu-selected {
+			background-color:rgb(240,240,240);
+		}
+
+		.user-center-menu:hover {
+			color:rgb(128,15,37);
+		}
+		
+		#cart-menu {
+			background-image: url(../images/user-cart.png);
+		}
+		#order-menu {
+			background-image: url(../images/order.png);
+		}
+		#credits-menu {
+			background-image: url(../images/credits.png);
+		}
+		#profile-menu {
+			background-image: url(../images/profile.png);
+		}
+		
+#order-list {
+	width: 837px;
+    margin-left: 30px;
+	line-height:30px;
+	font-size:14px;
+	color:rgb(250,250,250);
+	float:left;
+}
+	#order-list #order-head,
+	#order-list #order-buy-button {
+		background-color:rgb(20,100,150);
+	    height:40px;
+	    line-height:40px;
+	    float:left;
+	}
+	#order-list #order-head {
+		width:100%;
+	}
+	#checkbox-all-div,
+	.checkbox-item-div {
+		width:30px;
+	    margin-left:10px;
+	    float:left;
+	}
+	#checkbox-all-div {
+		margin-top:2px;
+	}
+	.checkbox-item-div {
+		margin-top:3px;
+	}
+	#order-remove-span {
+		margin-left:30px;
+	}
+	.order-head-operation {
+		cursor:pointer;
+	}
+	#order-total-price-label {
+		margin-left:480px;
+	}
+	#order-total-price {
+		font-weight:700;
+	}
+	#order-buy-button {
+		width:100px;
+		margin-left:5px;
+	    text-align:center;
+	    letter-spacing:3px;
+	    cursor: pointer;
+	}
+
+.order-item {
+	width: 835px;
+	height:110px;
+	line-height:20px;
+	font-size:12px;
+	color:grey;
+	float:left;
+	margin-top:5px;
+	border:solid 1px rgb(220,220,220);
+}
+.order-item:hover {
+	background-color:rgb(245,245,245);
+}
+
+.order-item .order-book-cover {
+	width: 100px;
+    height: 100px;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-size: auto 100px;
+    background-position-x: left;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
+.order-item .order-book-info,
+.order-file-info,
+.order-price-info,
+.order-item-operation {
+	overflow:hidden;
+    display: table-cell;
+    vertical-align: middle;
+    height:110px;
+}
+.order-item .order-book-info {
+	width:300px;
+}
+.order-title {
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+
+.order-file-info {
+	width:150px;
+	padding-left:30px;
+}
+.file-format-icon {
+	width:16px;
+    height:16px;
+    margin:0px 5px -2px -3px;
+}
+.order-price-info {
+	width:85px;
+	padding-left:30px;
+}
+.order-item-operation {
+	width:95px;
+}
+.order-item-operation-wrapper {
+	height: 65px;
+    border-left: solid 1px rgb(220,220,220);
+    padding-top: 8px;
+    text-align: center;
+}
+	.order-item-operation-wrapper p {
+		cursor:pointer;
+	}
+
+
+
+
+
+
+
+
+	

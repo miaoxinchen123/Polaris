@@ -1,0 +1,26 @@
+#page-center {
+	height:1000px;
+    margin-top:40px;
+}
+#page-center h2 {
+	text-align:left;
+    font-size:15px;
+    margin-top:30px;
+    font-weight:300;
+    padding-left:25px;
+    line-height:30px;
+    background-image:url("../images/question-icon.png");
+    background-position:left top;
+    background-repeat:no-repeat;
+}
+#page-center p {
+    font-weight:100;
+    font-size:13px;
+    text-align:left;
+    margin:5px 0px;
+    padding-left:25px;
+}
+#page-center p a {
+	font-weight:100;
+	color:rgb(0,0,238);
+}
