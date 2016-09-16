@@ -84,10 +84,18 @@ public class SearchController {
 				map.put("authors", hit.getSource().get("authors"));
 			}
 			map.put("year", hit.getSource().get("year"));
-			double price = k * (25 + 0.02 * (min(800, Integer.parseInt(hit.getSource().get("pages").toString())) - 300) + 0.0000003 * (min(60000000,  Integer.parseInt(hit.getSource().get("size").toString())) - 10000000));
-			BigDecimal b = new BigDecimal(price);  
-			double price1 = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();  
-			map.put("price", price1);
+			double price1 = 0;
+			if(hit.getSource().get("pages")!=null && hit.getSource().get("pages")!=""){
+				double price = k * (25 + 0.02 * (min(800, Integer.parseInt(hit.getSource().get("pages").toString())) - 300) + 0.0000003 * (min(60000000,  Integer.parseInt(hit.getSource().get("size").toString())) - 10000000));
+				BigDecimal b = new BigDecimal(price);  
+			    price1 = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();  
+			}else{
+				double price = k * (25  + 0.0000003 * (min(60000000,  Integer.parseInt(hit.getSource().get("size").toString())) - 10000000));
+				BigDecimal b = new BigDecimal(price);  
+			    price1 = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();  
+			}
+			
+			map.put("price", price1*1.3);
 			map.put("realPrice", price1);
 			map.put("coverUrl", hit.getSource().get("coverUrl"));
 			map.put("size", hit.getSource().get("size"));

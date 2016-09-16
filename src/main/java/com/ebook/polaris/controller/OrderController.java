@@ -44,7 +44,7 @@ public class OrderController {
 		
 	
 	/**
-	 * 购物车/订单添加记录
+	 * 购物车添加记录
 	 * @return
 	 */
 	@RequestMapping(value="/user/addCart", method = {RequestMethod.POST })
