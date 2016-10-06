@@ -12,7 +12,8 @@ public class UserDto {
     private String password;  
     private String name;  
     private String backEmail;  
-    private Integer credits;  
+    private Integer credits; 
+    private Integer rewardCredits;  
     private Date createTime;  
     private Date updateTime;
     private int cartCnt;
@@ -77,6 +78,12 @@ public class UserDto {
 	}
 	public void setCartCnt(int cartCnt) {
 		this.cartCnt = cartCnt;
+	}
+	public Integer getRewardCredits() {
+		return rewardCredits;
+	}
+	public void setRewardCredits(Integer rewardCredits) {
+		this.rewardCredits = rewardCredits;
 	}
     
 }

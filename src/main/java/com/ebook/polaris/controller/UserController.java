@@ -2,6 +2,7 @@ package com.ebook.polaris.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.jboss.netty.util.internal.StringUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,7 @@ import com.ebook.polaris.model.User;
 import com.ebook.polaris.service.CreditsService;
 import com.ebook.polaris.service.MessageService;
 import com.ebook.polaris.service.OrderService;
+import com.ebook.polaris.service.UserRelationService;
 import com.ebook.polaris.service.UserService;
 
 @Controller  
@@ -43,6 +46,8 @@ public class UserController {
     private MessageService messageService;
     @Autowired  
     private CreditsService creditsService;
+    @Autowired
+    private UserRelationService userRelationService;
     
     private UserDto userDto;
       
@@ -50,14 +55,31 @@ public class UserController {
     public @ResponseBody UserDto addUser(@RequestBody User user){  
         LOGGER.info("查询用户：" + user);  
         userDto = new UserDto();
+        User fatherUser = null;
+       
+        //如果有填写邀请码，首先对邀请码进行判断
+        if(null != user.getInvitationCode() && ""!= user.getInvitationCode()){
+        	fatherUser = userService.queryUserByInvitionCode(user.getInvitationCode());
+        	if(null==fatherUser){
+        		BeanUtils.copyProperties(user,userDto);  
+            	userDto.setCode(202);
+            	userDto.setMeassage("请输入正确的邀请码");
+            	return userDto;  
+        	}
+        }
+        
         User userInfo = userService.get(user.getEmail()); 
         if(null == userInfo){
         	//新建用户并保存
         	user.setBackEmail(user.getEmail());
         	user.setCreateTime(new Date());
         	user.setUpdateTime(new Date());
+        	user.setRewardCredits(new Integer(0));
         	user.setCredits(new Integer(0));
-        	userService.save(user);
+        	//UUID前6位
+        	user.setInvitationCode(UUID.randomUUID().toString().substring(0,8));
+        	user.setCodeStatus("no");
+        	userService.save(user,fatherUser);
         	BeanUtils.copyProperties(user,userDto); 
         	//新用户购物车显示0
         	userDto.setCartCnt(0);
@@ -133,6 +155,21 @@ public class UserController {
         return "保存成功";  
     }  
     
+    /**
+     * 保存提现请求 
+     */
+    @RequestMapping(value="/user/withdraw", method = {RequestMethod.GET })  
+    public @ResponseBody String withDraw(){  
+    	Message message = new Message();
+    	message.setContactType("reward");
+    	message.setCreateTime(new Date());
+    	message.setMessage("提取奖励积分");
+    	Subject currentUser = SecurityUtils.getSubject(); 
+    	//当前用户的id作为订单号
+    	message.setOrderId(currentUser.getPrincipal().toString());
+    	messageService.saveMessage(message);
+        return "积分奖励将于一个星期后发至付款支付宝账户中，请注意查收";  
+    }  
     
     /**
      * 判断有无权限进入充值中心

@@ -85,18 +85,25 @@
 	height:50px;
     margin:60px auto 30px auto;
     color:black;
-    width:400px;
+    width:800px;
     font-weight:100;
 }
 #credits-info-label {
     font-size:14px;
-    width:120px;
+    width:150px;
     float:left;
     height:30px;
     margin-top:10px;
     text-align:right;
 }
 #credits-info {
+	font-size:50px;
+	color:rgb(250,150,5);
+	width:160px;
+	float:left;
+	text-align:center;
+}
+#reward-credits-info {
 	font-size:50px;
 	color:rgb(250,150,5);
 	width:160px;

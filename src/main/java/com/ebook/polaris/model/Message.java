@@ -46,7 +46,7 @@ public class Message {
 	public void setContactType(String contactType) {
 		this.contactType = contactType;
 	}
-	 @Column(name = "orderId")
+	 @Column(name = "order_id")
 	public String getOrderId() {
 		return orderId;
 	}

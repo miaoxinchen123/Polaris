@@ -30,14 +30,6 @@ public class UserDaoImpl implements UserDao {
 		return (User) this.getCurrentSession().get(User.class, email);  
 	}
 	
-	public User queryUserByEmailAndPassWord(User user){
-		SQLQuery  sqlQuery= this.getCurrentSession().createSQLQuery("select * from user where email = ? and password= ?");
-		sqlQuery.setParameter(0, user.getEmail());
-		sqlQuery.setParameter(1, user.getPassword());
-		List<User> users  = sqlQuery.addEntity(User.class).list();
-		return (null==users||users.size()==0) ? null:users.get(0);  
-	}
-
 	public List<User> findAll() {
 		List<User> users = this.getCurrentSession().createQuery("from user").setCacheable(true).list();  
         return users;  
@@ -58,6 +50,21 @@ public class UserDaoImpl implements UserDao {
 	public void delete(String email) {
 		User entity = this.load(email);  
         this.getCurrentSession().delete(entity);  
+	}
+	
+	public User queryUserByEmailAndPassWord(User user){
+		SQLQuery  sqlQuery= this.getCurrentSession().createSQLQuery("select * from user where email = ? and password= ?");
+		sqlQuery.setParameter(0, user.getEmail());
+		sqlQuery.setParameter(1, user.getPassword());
+		List<User> users  = sqlQuery.addEntity(User.class).list();
+		return (null==users||users.size()==0) ? null:users.get(0);  
+	}
+
+	public User queryUserByInvitionCode(String invitionCode) {
+		SQLQuery  sqlQuery= this.getCurrentSession().createSQLQuery("select * from user where invitation_code = ?");
+		sqlQuery.setParameter(0,invitionCode);
+		List<User> users  = sqlQuery.addEntity(User.class).list();
+		return (null==users||users.size()==0) ? null:users.get(0);
 	}
 
 }

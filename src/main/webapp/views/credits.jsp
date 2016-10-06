@@ -41,7 +41,24 @@ $(function () {
 			};
 		})(i);
 	}	
+	
+	
 });
+
+function withdraw(){
+	 $.ajax({  
+	        type:"GET",  
+	        dataType: 'json',  
+	        contentType:"application/json",             
+	        url:"user/withdraw.htm",  
+	        error:function(data){  
+	            alert("出错了！！:"+data);  
+	        },  
+	        success:function(data){  
+	        	alert(data);
+	        }  
+     });  
+}
 </script>
 </head>
 
@@ -118,9 +135,13 @@ $(function () {
 				
 		<div id="credits-info-div">
 			<div id="credits-info-label">您目前的积分为：</div>
-			<div id="credits-info">1020</div>
-			<div id="how-to-use-credits">积分如何使用 ?</div>		
+			<div id="credits-info"></div>
+			
+			<div id="credits-info-label">您目前的奖励积分为：</div>
+			<div id="reward-credits-info"></div>
+			<div id="how-to-use-credits" onclick="withdraw()">提现奖励积分</div>		
 		</div>
+		
 		
 		<div id="credits-item-wrapper">
 			<div class="credits-item" id="credits-item-1">

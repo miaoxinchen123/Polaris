@@ -23,6 +23,7 @@ public class Credits {
 	private String creditsType; 
 	private String email;
 	private String bizNo;
+	private int credits;
 	private Date createTime;  
     private Date updateTime;
 	
@@ -60,7 +61,7 @@ public class Credits {
 	 * undo 就是没有操作过入库 
 	 * 
 	 */
-	 @Column(name = "creditsType")
+	 @Column(name = "credits_type")
 	public String getCreditsType() {
 		return creditsType;
 	}
@@ -81,6 +82,14 @@ public class Credits {
 	}
 	public void setBizNo(String bizNo) {
 		this.bizNo = bizNo;
+	}
+	
+	 @Column(name = "credits")
+	public int getCredits() {
+		return credits;
+	}
+	public void setCredits(int credits) {
+		this.credits = credits;
 	}
 }
 	

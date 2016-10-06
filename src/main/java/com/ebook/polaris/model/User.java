@@ -21,7 +21,10 @@ public class User {
     private String email;  
     private String password;  
     private String name;  
-    private String backEmail;  
+    private String backEmail; 
+    private String invitationCode ;
+    private String codeStatus ; // yes 激活 no 未激活
+    private Integer rewardCredits;
     private Integer credits;  
     private Date createTime;  
     private Date updateTime;
@@ -58,6 +61,29 @@ public class User {
 	public void setBackEmail(String backEmail) {
 		this.backEmail = backEmail;
 	}
+	@Column(name ="invitation_code")
+	public String getInvitationCode() {
+		return invitationCode;
+	}
+	public void setInvitationCode(String invitationCode) {
+		this.invitationCode = invitationCode;
+	}  
+	
+	@Column(name ="code_status")
+	public String getCodeStatus() {
+		return codeStatus;
+	}
+	public void setCodeStatus(String codeStatus) {
+		this.codeStatus = codeStatus;
+	}
+	
+	@Column(name ="reward_credits")
+	public Integer getRewardCredits() {
+		return rewardCredits;
+	}
+	public void setRewardCredits(Integer rewardCredits) {
+		this.rewardCredits = rewardCredits;
+	}
 	
 	@Column(name ="credits")
 	public Integer getCredits() {
@@ -87,5 +113,6 @@ public class User {
 	
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
-	}  
+	}
+	
 }

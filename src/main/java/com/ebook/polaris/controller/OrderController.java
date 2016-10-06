@@ -293,7 +293,7 @@ public class OrderController {
     	newOrder.setCreateTime(new Date());
     	newOrder.setUpdateTime(new Date());
     	
-    	//修改字表归属
+    	//修改子表归属
 		while(it.hasNext()){
 			OrderDetail tempDetail = it.next();
 			for(int i=0;i<orderDetailIdArray.length;i++){

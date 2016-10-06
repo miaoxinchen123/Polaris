@@ -12,6 +12,7 @@ $(function() {
 	var emailRegexRegister = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
 	emailRegister = $("#email-register"),
 	nameRegister = $("#name-register"),
+	invitationRegister = $("#invitation-register"),
 	passwordRegister = $("#password-register"),
 	passwordRegister2 = $("#password-register-2"),
 	allFieldsRegister = $([]).add(emailRegister).add(nameRegister).add(passwordRegister).add(passwordRegister2),
@@ -125,7 +126,7 @@ $(function() {
 	
 	  	if(valid) {
 	  		//注册Ajax
-	  		var userData={"email":emailRegister.val(),"password":passwordRegister.val(),"name":nameRegister.val()};
+	  		var userData={"email":emailRegister.val(),"password":passwordRegister.val(),"name":nameRegister.val(),"invitationCode":invitationRegister.val()};
 	        $.ajax({  
 		        type:"POST",  
 		        dataType: 'json',  
@@ -143,6 +144,9 @@ $(function() {
 		        	}else if(loginStatus == "201"){
 		        		emailRegister.addClass("ui-state-error");
 		    	    	updateTipsRegister(data.meassage);
+		        	}else if(loginStatus == "202"){
+		        		invitationRegister.addClass("ui-state-error");
+		    	    	updateTipsRegister(data.meassage);
 		        	}
 		        }  
 	        });  
@@ -152,8 +156,8 @@ $(function() {
 	
 	dialogRegister = $("#dialog-register-form").dialog({
 	  	autoOpen: false,
-	  	height: 375,
-	  	width: 400,
+	  	height: 425,
+	  	width: 410,
 	  	modal: true,
 	  	buttons: {
 	    	"立即注册": addUser,
@@ -490,6 +494,7 @@ $(function() {
 	 */
 	function defaultlogin(data){
 		var creditsAmounts = data.credits;	//用户积分数量
+		var rewardCreditsAmounts = data.rewardCredits;	//用户积分数量
 		var cartCnt = data.cartCnt;			//用户购物车内的物品数量
 		var username = data.name;	//用户昵称
 		
@@ -504,6 +509,7 @@ $(function() {
 		$("#credits-topup").css("display", "block");
 		$("#credits-amount").text(creditsAmounts);
 		$("#credits-info").text(creditsAmounts);
+		$("#reward-credits-info").text(rewardCreditsAmounts);
 		$("#cart").css("display", "block");
 		$("#cart-amount").text(cartCnt);
 		$("#menu-cartCnt").text(cartCnt);

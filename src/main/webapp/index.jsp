@@ -43,6 +43,8 @@ $(function () {
       <input type="text" name="email-register" id="email-register" value="用于发货, 请您仔细填写" class="text ui-widget-content ui-corner-all">
       <label for="name-register">昵称</label>
       <input type="text" name="name-register" id="name-register" value="" class="text ui-widget-content ui-corner-all">
+      <label for="email-register">邀请码</label>
+      <input type="text" name="invitation-register" id="invitation-register" value="" class="text ui-widget-content ui-corner-all">
       <label for="password-register">密码</label>
       <input type="password" name="password-register" id="password-register" value="" class="text ui-widget-content ui-corner-all">
       <label for="password-register-2">确认密码</label>

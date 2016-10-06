@@ -94,6 +94,15 @@ pageEncoding="UTF-8"%>
 					<input type="email" id="email-input" name="email" value="${user.email}" class="profile-input" disabled="disabled"/>
 				</div>
 				<div class="profile-item">
+					<span class="profile-label" id="email-label">邀请码</span>
+					<c:if test="${user.codeStatus=='no'}" >
+						<input type="email" value="交易成功后自动生成" class="profile-input" disabled="disabled"/>
+					</c:if>
+					<c:if test="${user.codeStatus=='yes'} " >
+						<input type="email" id="email-input" name="email" value="${user.invitationCode}" class="profile-input" disabled="disabled"/>
+					</c:if>
+				</div>
+				<div class="profile-item">
 					<span class="profile-label" id="email2-label">备用邮箱</span>
 					<input type="email" id="email2-input" name="backEmail" value="${user.backEmail}" class="profile-input"/>
 				</div>
